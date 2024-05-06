@@ -25,6 +25,7 @@ components:
     properties: {visible: false}
     type: Label
     layout_properties: {grid_position: 'KJCXMW,QJLHHN'}
+    event_bindings: {show: Classification_show}
 - type: FlowPanel
   properties: {}
   name: navbar_links
