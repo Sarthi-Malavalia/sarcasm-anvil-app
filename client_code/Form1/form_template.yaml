@@ -1,14 +1,35 @@
 is_package: true
 container:
   type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: '@theme:standard-page.html', visible: true}
 components:
 - type: ColumnPanel
   properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
-  components: []
+  components:
+  - name: label_2
+    properties: {text: 'Enter a Sarcastic Headline for Detection:', align: center,
+      bold: true, underline: false, spacing_below: large, spacing_above: large}
+    type: Label
+    layout_properties: {grid_position: 'UOKRTI,NHOWED'}
+  - name: Input
+    properties: {text: '', tooltip: Enter Text for Classification, placeholder: Enter Text for Classification}
+    type: TextBox
+    layout_properties: {grid_position: 'ONDRIR,UAWSDU'}
+  - name: Classify
+    properties: {text: button_1}
+    type: Button
+    layout_properties: {grid_position: 'QYLIFT,GPMMOO'}
+  - name: Classification
+    properties: {visible: false}
+    type: Label
+    layout_properties: {grid_position: 'KJCXMW,QJLHHN'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+- name: label_1
+  properties: {text: Sarcasm Detection Using Machine Learning, align: left}
+  type: Label
+  layout_properties: {slot: title}
