@@ -13,16 +13,17 @@ components:
       bold: true, underline: false, spacing_below: large, spacing_above: large}
     type: Label
     layout_properties: {grid_position: 'UOKRTI,NHOWED'}
-  - name: Input
+  - name: headline
     properties: {text: '', tooltip: Enter Text for Classification, placeholder: Enter Text for Classification}
     type: TextBox
     layout_properties: {grid_position: 'ONDRIR,UAWSDU'}
   - name: Classify
-    properties: {text: Classify}
+    properties: {text: Classify, enabled: true}
     type: Button
     layout_properties: {grid_position: 'QYLIFT,GPMMOO'}
+    event_bindings: {click: Classify_click}
   - name: Classification
-    properties: {visible: false}
+    properties: {visible: true, bold: false, italic: true, align: center}
     type: Label
     layout_properties: {grid_position: 'KJCXMW,QJLHHN'}
     event_bindings: {show: Classification_show}
