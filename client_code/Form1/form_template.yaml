@@ -18,7 +18,7 @@ components:
     type: TextBox
     layout_properties: {grid_position: 'ONDRIR,UAWSDU'}
   - name: Classify
-    properties: {text: button_1}
+    properties: {text: Classify}
     type: Button
     layout_properties: {grid_position: 'QYLIFT,GPMMOO'}
   - name: Classification
