@@ -32,6 +32,6 @@ components:
   name: navbar_links
   layout_properties: {slot: nav-right}
 - name: label_1
-  properties: {text: Sarcasm Detection Using Machine Learning, align: left}
+  properties: {text: Sarcasm Detection Using Machine Learning, align: center}
   type: Label
   layout_properties: {slot: title}
