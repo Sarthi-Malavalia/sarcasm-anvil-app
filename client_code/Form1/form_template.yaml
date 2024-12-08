@@ -1,37 +1,36 @@
-is_package: true
-container:
-  type: HtmlTemplate
-  properties: {html: '@theme:standard-page.html', visible: true}
 components:
-- type: ColumnPanel
-  properties: {col_widths: '{}'}
-  name: content_panel
-  layout_properties: {slot: default}
-  components:
-  - name: label_2
-    properties: {text: 'Enter a Sarcastic Headline for Detection:', align: center,
-      bold: true, underline: false, spacing_below: large, spacing_above: large}
+- components:
+  - layout_properties: {grid_position: 'UOKRTI,NHOWED'}
+    name: label_2
+    properties: {align: center, bold: true, spacing_above: large, spacing_below: large, text: 'Enter a Sarcastic Headline for Detection:', underline: false}
     type: Label
-    layout_properties: {grid_position: 'UOKRTI,NHOWED'}
-  - name: headline
-    properties: {text: '', tooltip: Enter Text for Classification, placeholder: Enter Text for Classification}
+  - layout_properties: {grid_position: 'ONDRIR,UAWSDU'}
+    name: headline
+    properties: {placeholder: Enter Text for Classification, text: '', tooltip: Enter Text for Classification}
     type: TextBox
-    layout_properties: {grid_position: 'ONDRIR,UAWSDU'}
-  - name: Classify
-    properties: {text: Classify, enabled: true}
-    type: Button
+  - event_bindings: {click: Classify_click}
     layout_properties: {grid_position: 'QYLIFT,GPMMOO'}
-    event_bindings: {click: Classify_click}
-  - name: Classification
-    properties: {visible: true, bold: false, italic: true, align: center}
-    type: Label
+    name: Classify
+    properties: {enabled: true, text: Classify}
+    type: Button
+  - event_bindings: {show: Classification_show}
     layout_properties: {grid_position: 'KJCXMW,QJLHHN'}
-    event_bindings: {show: Classification_show}
-- type: FlowPanel
-  properties: {}
+    name: Classification
+    properties: {align: center, bold: false, italic: true, visible: true}
+    type: Label
+  layout_properties: {slot: default}
+  name: content_panel
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
+- layout_properties: {slot: nav-right}
   name: navbar_links
-  layout_properties: {slot: nav-right}
-- name: label_1
-  properties: {text: Sarcasm Detection Using Machine Learning, align: center}
+  properties: {}
+  type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {align: center, text: Sarcasm Detection Using Machine Learning}
   type: Label
-  layout_properties: {slot: title}
+container:
+  properties: {html: '@theme:standard-page.html', visible: true}
+  type: HtmlTemplate
+is_package: true
